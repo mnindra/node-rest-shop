@@ -1,10 +1,9 @@
 import express from 'express';
-
 const app = express();
-app.use((req, res, next) => {
-  res.status(200).json({
-    message: 'it works!'
-  });
-});
+import productRoutes from './api/routes/products';
+import orderRoutes from './api/routes/orders';
+
+app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 
 export default app;

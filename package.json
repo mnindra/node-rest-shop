@@ -1,0 +1,29 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API for online shop",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist -w",
+    "server": "nodemon dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnindra/node-rest-shop.git"
+  },
+  "author": "M. Nindra Zaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnindra/node-rest-shop/issues"
+  },
+  "homepage": "https://github.com/mnindra/node-rest-shop#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.14.0",
+    "nodemon": "^1.14.6"
+  }
+}

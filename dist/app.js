@@ -21,7 +21,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = (0, _express2.default)();
 
 
+// Default Route
 app.use('/products', _products2.default);
 app.use('/orders', _orders2.default);
+
+// Error Route
+app.use(function (req, res, next) {
+  var error = new Error('Not Found');
+  error.status = 404;
+  next(error);
+});
+
+app.use(function (error, req, res, next) {
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message
+    }
+  });
+});
 
 exports.default = app;

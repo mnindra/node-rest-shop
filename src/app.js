@@ -1,12 +1,17 @@
 import express from 'express';
 const app = express();
 import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+
 import productRoutes from './api/routes/products';
 import orderRoutes from './api/routes/orders';
 
 // Body parser for post data
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+// mongodb connect
+mongoose.connect('mongodb://root:toor@node-rest-shop-shard-00-00-ox9qr.mongodb.net:27017,node-rest-shop-shard-00-01-ox9qr.mongodb.net:27017,node-rest-shop-shard-00-02-ox9qr.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin', {useMongoClient: true});
 
 // Allow CORS
 app.use((req, res, next) => {

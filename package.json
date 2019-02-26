@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d dist -w",
-    "server": "nodemon dist/server.js"
+    "dev": "nodemon dist/server.js"
   },
   "repository": {
     "type": "git",

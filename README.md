@@ -1,8 +1,9 @@
-# node-rest-shop
+# Node REST Shop
 A Node.js RESTful API for online shop
 
-Install dependences
-> npm install
+## Development
 
-Run server
-> npm run server
+```bash
+$ npm install
+$ npm run dev
+```
